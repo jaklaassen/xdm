@@ -34,6 +34,65 @@
           "type": "string",
           "description": "Activity title."
         },
+        "xdm:brief": {
+          "title": "Brief",
+          "type": "string",
+          "description": "An HTML brief describing the activity."
+        },
+        "xdm:thumbnail": {
+          "title": "Thumbnail",
+          "type": "string",
+          "description": "Thumbnail image representing the activity."
+        },
+        "xdm:channel": {
+          "title": "Channel",
+          "enum": [
+            "not_specified",
+            "email",
+            "sms",
+            "push_notification",
+            "direct_mail"
+          ],
+          "meta:enum": {
+            "email": "email",
+            "sms": "SMS",
+            "push_notification": "Push Notification",
+            "not_specified": "Not Specified"
+          },
+          "description": "Channel on which this activity is executed.",
+          "default": "not_specified"
+        },
+        "xdm:activityState": {
+          "title": "State",
+          "enum": [
+            "not_specified",
+            "edition",
+            "ready_to_start",
+            "started",
+            "finished",
+            "failed"
+          ],
+          "meta:enum": {
+            "edition": "In Edition",
+            "ready_to_start": "Ready to Start",
+            "started": "Started",
+            "finished": "Finished",
+            "failed": "Failed",
+            "not_specified": "Not Specified"
+          },
+          "description": "State of the activity.",
+          "default": "not_specified"
+        },
+        "xdm:activityCode": {
+          "title": "Activity Code",
+          "type": "string",
+          "description": "A short business code to identify the activity within an organisation."
+        },
+        "xdm:readOnly": {
+          "title": "Read Only",
+          "type": "boolean",
+          "description": "A indicator that the activity is published and therefore cannot be modified anymore."
+        },
         "xdm:experience": {
           "$ref": "https://ns.adobe.com/xdm/campaigns/experience"
         }

@@ -38,6 +38,14 @@
           "type": "string",
           "format": "date-time",
           "description": "The date when the activity expires. Different publishing channels might use the end date in implementation-dependent ways."
+        },
+        "xdm:thumbnail": {
+          "title": "Thumbnail",
+          "type": "string",
+          "description": "Thumbnail image representing the experience"
+        },
+        "xdm:parent": {
+          "$ref": "https://ns.adobe.com/xdm/campaigns/experience"
         }
       }
     }

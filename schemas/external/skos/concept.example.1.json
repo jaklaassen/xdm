@@ -1,0 +1,52 @@
+{
+  "@id": "concept:concept_1",
+  "skos:prefLabel": {
+    "en": "Mammals",
+    "fr": "Mammifères"
+  },
+  "skos:broader": [
+    "concept:parent_concept_1"
+  ],
+  "skos:related": [
+    "concept:related_concept_1"
+  ],
+  "skos:inScheme": [
+    "scheme:scheme_1"
+  ],
+  "skos:topConceptOf": [
+    "scheme:scheme_1"
+  ],
+  "skos:note": [
+    {
+      "en": "These are animals, and also mammals, so its like a hierarchy."
+    }
+  ],
+  "skos:scopeNote": [
+    {
+      "en": "Intended to be used for mammals when appropriate."
+    }
+  ],
+  "skos:definition": {
+    "en": "A warm-blooded vertebrate animal of a class that is distinguished by the possession of hair or fur, the secretion of milk by females for the nourishment of the young, and (typically) the birth of live young."
+  },
+  "skos:example": [
+    {
+      "en": "giraffe"
+    }
+  ],
+  "skos:historyNote": [
+    {
+      "en": "Organisms were first classified by Aristotle (Greece, 384–322 BC) during his stay on the Island of Lesbos."
+    }
+  ],
+  "skos:editorialNote": [
+    {
+      "en": "Review whether we should establish synonym relations with industry-standard vocabularies."
+    }
+  ],
+  "skos:changeNote": [
+    {
+      "en": "Moved from the 'biology' scheme to a new 'biological taxonomy' scheme (2017-04-23)."
+    }
+  ]
+}

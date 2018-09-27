@@ -1,0 +1,51 @@
+{
+  "meta:license": [
+    "Copyright 2017 Adobe Systems Incorporated. All rights reserved.",
+    "This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license",
+    "you may not use this file except in compliance with the License. You may obtain a copy",
+    "of the License at https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "$id": "https://ns.adobe.com/xdm/campaign/field",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Field",
+  "description": "Fields are data definitions that can be used in templates. Implementations combine templates and their fields to produce customer-defined XDMs.",
+  "meta:extensible": true,
+  "type": "object",
+  "meta:abstract": false,
+  "definitions": {
+    "field": {
+      "properties": {
+        "@id": {
+          "type": "string",
+          "title": "ID",
+          "description": "The field ID."
+        },
+        "xdm:name": {
+          "type": "string",
+          "title": "Field Name",
+          "description": "The field name that will be used in the XDM definition.",
+        },
+        "xdm:title": {
+          "type": "string",
+          "title": "Title",
+          "description": "The field title. Used as the label in forms.",
+        },
+        "xdm:type": {
+          "type": "string",
+          "title": "Type",
+          "description": "The field type.",
+          "enum": ["string", "integer"],
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/field"
+    }
+  ],
+  "required": [
+    "@id"
+  ],
+  "meta:status": "experimental"
+}

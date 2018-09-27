@@ -1,0 +1,7 @@
+{
+  "@id": "scheme:sheme_1",
+  "dc:title": "Biology Taxonomy",
+  "skos:hasTopConcept": [
+    "concept:parent_concept_1"
+  ]
+}

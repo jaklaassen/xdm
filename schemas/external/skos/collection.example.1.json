@@ -1,0 +1,17 @@
+{
+  "@id": "collection:collection_1",
+  "skos:prefLabel": {
+    "en": "First Collection",
+    "fr": "Première Collection"
+  },
+  "skos:altLabel": {
+    "en": ["First"],
+    "fr": ["Première"]
+  },
+  "skos:hiddenLabel": {
+    "en": ["Kolekshon"]
+  },
+  "skos:member": [
+    "concept:concept1"
+  ]
+}

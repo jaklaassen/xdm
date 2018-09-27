@@ -1,0 +1,47 @@
+{
+  "meta:license": [
+    "Copyright 2018 Adobe Systems Incorporated. All rights reserved.",
+    "This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license",
+    "you may not use this file except in compliance with the License. You may obtain a copy",
+    "of the License at https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "$id": "https://ns.adobe.com/xdm/external/skos/conceptscheme",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Concept Scheme",
+  "description": "A scheme for organizing SKOS concepts [https://www.w3.org/TR/skos-primer/#secscheme].",
+  "type": "object",
+  "definitions": {
+    "conceptscheme": {
+      "properties": {
+        "dc:title": {
+          "type": "string",
+          "description": "The title of the concept scheme."
+        },
+        "skos:hasTopConcept": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"            
+          },
+          "description": "Top concepts of this scheme. Used to find the entry-point into the scheme's concept hierarchy."
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri-reference",
+          "description": "A unique identifier for the scheme."
+        }
+      }
+    },
+    {
+      "$ref": "#/definitions/conceptscheme"
+    }
+  ],
+  "meta:status": "experimental"
+}

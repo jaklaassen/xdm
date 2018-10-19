@@ -1,0 +1,7 @@
+{
+  "@id": "initiative1",
+  "xdm:title": "Initiative 1",
+  "xdm:startDate": "2017-09-26T15:52:25+00:00",
+  "xdm:endDate": "2017-09-27T15:52:25+00:00",
+  "xdm:initiative": "parent_initiative"
+}

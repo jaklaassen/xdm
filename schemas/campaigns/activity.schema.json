@@ -1,0 +1,107 @@
+{
+  "meta:license": [
+    "Copyright 2017 Adobe Systems Incorporated. All rights reserved.",
+    "This file is licensed to you under the Apache License, Version 2.0 (the 'License');",
+    "you may not use this file except in compliance with the License. You may obtain a copy",
+    "of the License at http://www.apache.org/licenses/LICENSE-2.0"
+  ],
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "https://ns.adobe.com/xdm/campaigns/activity.schema.json",
+  "title": "Activity",
+  "description": "A marketing activity is the delivery of an experience to one or more audiences.",
+  "definitions": {
+    "activity": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "description": "A unique and persistent identifier for the activity."
+        },
+        "xdm:startDate": {
+          "title": "Start Date",
+          "type": "string",
+          "format": "date-time",
+          "description": "The date when the activity becomes valid. Different publishing channels might use the start date in implementation-dependent ways."
+        },
+        "xdm:endDate": {
+          "title": "End Date",
+          "type": "string",
+          "format": "date-time",
+          "description": "The date when the activity expires. Different publishing channels might use the end date in implementation-dependent ways."
+        },
+        "xdm:title": {
+          "title": "Title",
+          "type": "string",
+          "description": "Activity title."
+        },
+        "xdm:brief": {
+          "title": "Brief",
+          "type": "string",
+          "description": "An HTML brief describing the activity."
+        },
+        "xdm:thumbnail": {
+          "title": "Thumbnail",
+          "type": "string",
+          "description": "Thumbnail image representing the activity."
+        },
+        "xdm:channel": {
+          "title": "Channel",
+          "enum": [
+            "not_specified",
+            "email",
+            "sms",
+            "push_notification",
+            "direct_mail"
+          ],
+          "meta:enum": {
+            "email": "email",
+            "sms": "SMS",
+            "push_notification": "Push Notification",
+            "not_specified": "Not Specified"
+          },
+          "description": "Channel on which this activity is executed.",
+          "default": "not_specified"
+        },
+        "xdm:activityState": {
+          "title": "State",
+          "enum": [
+            "not_specified",
+            "edition",
+            "ready_to_start",
+            "started",
+            "finished",
+            "failed"
+          ],
+          "meta:enum": {
+            "edition": "In Edition",
+            "ready_to_start": "Ready to Start",
+            "started": "Started",
+            "finished": "Finished",
+            "failed": "Failed",
+            "not_specified": "Not Specified"
+          },
+          "description": "State of the activity.",
+          "default": "not_specified"
+        },
+        "xdm:activityCode": {
+          "title": "Activity Code",
+          "type": "string",
+          "description": "A short business code to identify the activity within an organisation."
+        },
+        "xdm:readOnly": {
+          "title": "Read Only",
+          "type": "boolean",
+          "description": "A indicator that the activity is published and therefore cannot be modified anymore."
+        },
+        "xdm:experience": {
+          "$ref": "https://ns.adobe.com/xdm/campaigns/experience"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/activity"
+    }
+  ]
+}

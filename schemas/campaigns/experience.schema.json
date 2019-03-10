@@ -1,0 +1,58 @@
+{
+  "meta:license": [
+    "Copyright 2017 Adobe Systems Incorporated. All rights reserved.",
+    "This file is licensed to you under the Apache License, Version 2.0 (the 'License');",
+    "you may not use this file except in compliance with the License. You may obtain a copy",
+    "of the License at http://www.apache.org/licenses/LICENSE-2.0"
+  ],
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "https://ns.adobe.com/xdm/campaigns/experience.schema.json",
+  "title": "Experience",
+  "description": "An experience is a collection of content and activities used to deliver a specific experience to users.",
+  "definitions": {
+    "experience": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "description": "A unique and persistent identifier for the experience."
+        },
+        "xdm:title": {
+          "title": "Title",
+          "type": "string",
+          "description": "Activity title."
+        },
+        "xdm:brief": {
+          "title": "Brief",
+          "type": "string",
+          "description": "An HTML brief describing the experience."
+        },
+        "xdm:startDate": {
+          "title": "Start Date",
+          "type": "string",
+          "format": "date-time",
+          "description": "The date when the activity becomes valid. Different publishing channels might use the start date in implementation-dependent ways."
+        },
+        "xdm:endDate": {
+          "title": "End Date",
+          "type": "string",
+          "format": "date-time",
+          "description": "The date when the activity expires. Different publishing channels might use the end date in implementation-dependent ways."
+        },
+        "xdm:thumbnail": {
+          "title": "Thumbnail",
+          "type": "string",
+          "description": "Thumbnail image representing the experience"
+        },
+        "xdm:parent": {
+          "$ref": "https://ns.adobe.com/xdm/campaigns/experience"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/experience"
+    }
+  ]
+}
